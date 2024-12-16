@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS Starter Kit</title>
-
     <link rel="stylesheet" href="style.css">
-
     <script src="time.js" defer></script>
     <script src="date.js" defer></script>
 
 </head>
-<body class="h-screen flex justify-center items-center">
+<body class="h-screen flex justify-center items-center bg-purple-200">
 
-    <main>
-  
+    <main class="w-full max-w-lg p-6 bg-white rounded shadow-lg text-center space-y-8 font-mono">
         <!-- Time -->
-        <time class="time container grid block mx-auto lg:grid-cols-6 md:grid-cols-2 font-mono">
-                <data class="hours">HH</data> :
-                <data class="minutes">MM</data> :
-                <data class="seconds">SS</data>
-                <data class="amOrPM">AM/PM</data>
+        <section class="time-section">
+            <h2 class="text-2xl font-semibold mb-4">Current Time</h2>
+            <time class="time grid grid-cols-4 gap-4 text-lg">
+                <span class="hours bg-gray-100 rounded p-2">HH</span>
+                <span class="minutes bg-gray-100 rounded p-2">MM</span>
+                <span class="seconds bg-gray-100 rounded p-2">SS</span>
+                <span class="amOrPM bg-gray-100 rounded p-2">AM/PM</span>
             </time>
-      
-          
+        </section>
+
         <!-- Date -->
-        <time class="date container grid block mx-auto lg:grid-cols-4 md:grid-cols-2 font-mono">
-          <data class="month">Month</data>
-          <data class="dayOfMonth">00</data>,
-          <data class="year">0000</data> -
-          <data class="dayOfWeek">SMTWTFS</data>
-        </time>
-      
-      </main>
+        <section class="date-section">
+            <h2 class="text-2xl font-semibold mb-4">Today's Date</h2>
+            <time class="date grid grid-cols-2 gap-4 text-lg">
+                <span class="month bg-gray-100 rounded p-2">Month</span>
+                <span class="dayOfMonth bg-gray-100 rounded p-2">00</span>
+                <span class="year bg-gray-100 rounded p-2 col-span-2">0000</span>
+                <span class="dayOfWeek bg-gray-100 rounded p-2 col-span-2">Day of the Week</span>
+            </time>
+        </section>
+    </main>
+
     
 </body>
 </html>
